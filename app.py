@@ -287,7 +287,7 @@ def save_to_sheets(data: dict):
         creds = Credentials.from_service_account_info(st.secrets["gcp_service_account"], scopes=scope)
         client = gspread.authorize(creds)
         
-        sheet = client.open("RHM Estimates").sheet1  # CHANGE TO YOUR SHEET NAME
+        sheet = client.open("RHM-Estimates").sheet1  # CHANGE TO YOUR SHEET NAME
         
         row = [
             data["timestamp"],
